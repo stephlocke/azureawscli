@@ -4,4 +4,5 @@ RUN apt-get update -qq && apt-get install python-pip -y
 RUN pip install awscli
 
 
-VOLUME ["~/.aws"]
+VOLUME ["/.aws"]
+ENV AWS_CONFIG_FILE=/.aws/credentials
